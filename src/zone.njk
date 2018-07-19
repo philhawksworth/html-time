@@ -6,7 +6,8 @@ pagination:
   alias: zone
 permalink: /{{ zone }}/index.html
 ---
-<h1>It's about... {{ zone | time }}</h1>
-<p>
-  ( {{ zone | zone }})
-</p>
+<h1>{{ zone | time }}</h1>
+<div class="deets">
+  <p>({{ zone | zone }} )</p>
+  <p>The time according to Netlify. <a href="https://github.com/philhawksworth/html-time">Made</a> by <a href="https://twitter.com/philhawksworth">Phil</a> for a giggle.</p>
+</div>
