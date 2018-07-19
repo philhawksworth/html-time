@@ -1,5 +1,5 @@
-/  /0   Country=gb,pt
-/  /1   Country=fr,es
-/  /-8  Country=us
+/  /UTC  200  Country=gb,pt
+/  /1 200  Country=fr,es
+/  /-8 200 Country=us
 
-/*  /0 404
+/*  /UTC 404
