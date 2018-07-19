@@ -7,8 +7,9 @@
     <title>{{ title }}</title>
   </head>
   <body>
-    <div class="container">
     {{ content | safe }}
+    <div class="deets">
+      <p>The time according to Netlify ({{ zone | zone }} ).<br /> <a href="https://github.com/philhawksworth/html-time">Made</a> by <a href="https://twitter.com/philhawksworth">Phil</a> for a giggle.</p>
     </div>
   </body>
 </html>

@@ -36,8 +36,12 @@ h1 {
 }
 
 .deets {
-  font-size: 0.8em;
-  opacity: 0.8;
-  font-style: italic;
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  font-size: 0.7em;
+  text-align: right;
+  color: #a99;
 }
+
 
