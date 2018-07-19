@@ -1,0 +1,13 @@
+{
+  "name": "html-time",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start" : "eleventy --serve",
+    "build" : "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.5.0"
+  }
+}

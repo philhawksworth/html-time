@@ -1,0 +1,12 @@
+---
+layout: base.njk
+pagination:
+  data: timezones
+  size: 1
+  alias: zone
+permalink: /{{ zone }}/index.html
+---
+<h1>It's about... {{ zone | time }}</h1>
+<p>
+  ( {{ zone | zone }})
+</p>
