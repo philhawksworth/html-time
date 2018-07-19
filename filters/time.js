@@ -10,6 +10,9 @@ function pad(num){
   What's the time, Mr Wolf? (and any timezone)
 */
 module.exports = function(timezone) {
+  if (timezone == "UTC") {
+    timezone = 0;
+  }
   var d = new Date();
   var hours = d.getHours() + timezone;
   hours = hours > 23 ? hours - 24 : hours;
