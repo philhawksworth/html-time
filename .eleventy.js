@@ -2,6 +2,7 @@ module.exports = function(config) {
 
   // just pass the css we find through to the dist folder
   config.addPassthroughCopy("src/css");
+  config.addPassthroughCopy("_redirects");
 
   config.addFilter("time", require("./filters/time.js") );
   config.addFilter("zone", require("./filters/zone.js") );
