@@ -8,4 +8,4 @@ pagination:
 permalink: /{{ zone }}/index.html
 keepfresh: true
 ---
-<h1 class="time">{{ zone | time }}</h1>
+<h1 class="time">{{ zone | time | coloncapture | safe }}</h1>

@@ -18,5 +18,7 @@ module.exports = function(zone) {
     locale = 'en-US'
   }
 
+  now.setTime(now.getTime() + 30000); // the build takes about 30 seconds... let's add a little buffer.
+
   return now.toLocaleString(locale, { timeZone: zone, hour: '2-digit', minute: '2-digit' });
 };
