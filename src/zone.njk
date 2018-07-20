@@ -1,9 +1,11 @@
 ---
+title: Last time we checked, this was the time.
 layout: base.njk
 pagination:
   data: timezones
   size: 1
   alias: zone
 permalink: /{{ zone }}/index.html
+keepfresh: true
 ---
 <h1 class="time">{{ zone | time }}</h1>
