@@ -1,11 +1,11 @@
 module.exports = function(config) {
 
-  // just pass the css we find through to the dist folder
+  // just pass our css and redirect rules through to the dist folder
   config.addPassthroughCopy("src/css");
   config.addPassthroughCopy("_redirects");
 
+  // Add a handy date formatter
   config.addFilter("time", require("./filters/time.js") );
-  config.addFilter("zone", require("./filters/zone.js") );
 
   return {
 
@@ -17,7 +17,7 @@ module.exports = function(config) {
     },
 
     // some handy options
-    templateFormats : ["njk", "md"],
+    templateFormats : ["njk"],
     passthroughFileCopy: true
 
   };

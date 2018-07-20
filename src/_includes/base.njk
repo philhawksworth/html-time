@@ -7,7 +7,9 @@
     <title>{{ title }}</title>
   </head>
   <body>
+    <div class="content">
     {{ content | safe }}
+    </div>
     <div class="deets">
       <p>The time according to Netlify
       {% if zone %}(<a href="/timezones">{{ zone }}</a>){% endif %}

@@ -1,5 +1,16 @@
 [
-  "Europe/London",
+
+  "Pacific/Auckland",
+  "Australia/Sydney",
+  "Australia/Perth",
+  "Asia/Hong_Kong",
+  "Europe/Bucharest",
+  "Europe/Moscow",
+  "Europe/Istanbul",
   "Europe/Paris",
-  "America/Los_Angeles"
+  "Europe/London",
+  "America/New_York",
+  "America/Chicago",
+  "America/Los_Angeles",
+  "Pacific/Honolulu"
 ]

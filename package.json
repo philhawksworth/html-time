@@ -9,5 +9,9 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philhawksworth/html-time"
   }
 }

@@ -1,5 +1,11 @@
-/  /Europe/London  200  Country=gb,pt
-/  /Europe/Paris 200  Country=fr,es
-/  /America/Los_Angeles 200 Country=us
+/  /Pacific/Auckland      200 Country=nz
+/  /Australia/Sydney      200 Country=au
+/  /Asia/Hong_Kong        200 Country=hk
+/  /Europe/Bucharest      200 Country=ro
+/  /Europe/Moscow         200 Country=ru
+/  /Europe/Istanbul       200 Country=tr
+/  /Europe/Paris          200 Country=fr,es,de,it,se,dk
+/  /Europe/London         200 Country=gb,pt
+/  /America/Los_Angeles   200 Country=us
 
-/*  /Europe/London 404
+/*  /Europe/London        404
