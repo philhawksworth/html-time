@@ -1,5 +1,5 @@
-/  /UTC  200  Country=gb,pt
-/  /1 200  Country=fr,es
-/  /-8 200 Country=us
+/  /Europe/London  200  Country=gb,pt
+/  /Europe/Paris 200  Country=fr,es
+/  /America/Los_Angeles 200 Country=us
 
-/  /UTC 404
+/*  /Europe/London 404

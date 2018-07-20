@@ -1,20 +1,9 @@
 
 /*
-  Leading zeroes please
+  What's the time, Mr Wolf? (per a timezone)
 */
-function pad(num){
-  return `0${num}`.slice(-2);
-}
-
-/*
-  What's the time, Mr Wolf? (and any timezone)
-*/
-module.exports = function(timezone) {
-  if (timezone == "UTC") {
-    timezone = 0;
-  }
-  var d = new Date();
-  var hours = d.getHours() + timezone;
-  hours = hours > 23 ? hours - 24 : hours;
-  return `${pad(hours)}:${pad(d.getMinutes())}`;
+module.exports = function(zone) {
+  let now = new Date();
+  let time = now.toLocaleString('en-US', { timeZone: zone, hour: '2-digit', minute: '2-digit' });
+  return time;
 }
