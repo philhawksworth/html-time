@@ -8,7 +8,11 @@
     {%- if keepfresh %}
     <meta http-equiv="refresh" content="30">
     {%- endif %}
+    {%- if zone %}
+    <title>{{ zone | time }}</title>
+    {%- else -%}
     <title>{{ title }}</title>
+    {% endif -%}
   </head>
   <body>
     <div class="content">
