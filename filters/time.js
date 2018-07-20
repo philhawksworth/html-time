@@ -4,7 +4,7 @@
 */
 module.exports = function(zone) {
   const now = new Date();
-  let locale = 'en-GB'; // Go figure, the default time format for the UK is 24 hours...
+  let locale = 'nl-NL';
 
   // Weird countries that don't handle time in 24 hours...
   const weirdos = [
@@ -14,7 +14,7 @@ module.exports = function(zone) {
     'America/Los_Angeles'
   ];
 
-  if(weirdos.indexOf(zone) > -1) {
+  if(weirdos.indexOf(zone) !== -1) {
     locale = 'en-US'
   }
 
