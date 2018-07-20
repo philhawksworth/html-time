@@ -1,0 +1,34 @@
+---
+layout: base.njk
+title: Why make this?
+---
+<div class="prose">
+  <h1>But... but why?</h1>
+  <h2>tl;dr:</h2>
+  <p>
+    Zach Leatherman <em>made</em> me do it.
+  </p>
+  <blockquote>
+    <p>
+      free side project idea: HTML-only static site generated clock that deploys a new version to <a href="https://twitter.com/netlify">@netlify</a> every minute
+    </p>
+    <p>
+      — <a href="https://twitter.com/zachleat/status/1020034115817680896">@zachleat</a>
+    </p>
+  </blockquote>
+
+  <h2>Easy, automated deploys</h2>
+  <p>
+    This site is made of static HTML. There is no javascript running to detect the time in your timezone and to display it to you.
+  </p>
+  <p>
+    Instead, <a href="/">the time you see</a> is the time that the site was generated and deployed. It just so happens that building and deploying with Netlify is so easy, so frictionless, and so confident, that I felt comfortable rebuilding and deploying the site to Netlify's intelligent global CDN <em>every minute</em>.
+  </p>
+  <h2>Localization via the CDN</h2>
+  <p>
+    When you access this site, the CDN notices where in the world you are, and if a route has been generate for your country, it will automatically serve you the page which was generated for it. There <a href="/timezones">isn't a comprehemsiove list</a>, but you can always extend it with a <a href="{{ pkg.repository.url }}">pull request</a>!
+  </p>
+</div>
+
+
+

@@ -36,12 +36,24 @@ a:focus {
 }
 
 .content {
-  width: 80%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
+.prose {
+  width: 100%;
+  text-align: left;
+}
+
+@media (min-width: 700px) {
+  .prose {
+    width: 70%;
+  }
+}
+
 h1 {
+  padding-top: 2em;
   padding-bottom: 1em;
 }
 h1.time {
@@ -49,14 +61,40 @@ h1.time {
   font-size: 16vw;
   line-height: 1;
 }
+h2 {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+blockquote {
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-left-color: #beff46;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: rgba(255,255,255,0.05);
+}
 
 .deets {
   position: absolute;
-  bottom: 2em;
+  top: 2em;
   right: 2em;
   font-size: 0.7em;
   text-align: right;
   color: #a99;
+}
+
+.deets a:link,
+.deets a:visited {
+  color: #ccc;
+}
+.deets a:hover,
+.deets a:focus {
+  color: #fff;
 }
 
 ul {
