@@ -19,7 +19,7 @@ Since we can run this build so regularly and with such confidence on Netlify, we
 
 ## Are you an idiot?
 
-Possibly. But it turns out that this is a nice example of how the country-specific CDN routing is on Netlify thanks to its concise, yet powerful `_redirects` API.
+Possibly. But it turns out that this is a nice example of how the country-specific CDN routing is on Netlify thanks to its concise, yet powerful [`_redirects`](_redirects) API. ([docs](https://www.netlify.com/docs/redirects/))
 
 Have a poke around!
 
