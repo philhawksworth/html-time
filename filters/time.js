@@ -8,13 +8,21 @@ module.exports = function(zone) {
 
   // Weird countries that don't handle time in 24 hours...
   const weirdos = [
-    'Pacific/Auckland',
-    'Australia/Sydney',
+    'Pacific/',
+    'Australia/',
     'Europe/London',
-    'America/Los_Angeles'
+    'America/'
   ];
 
-  if(weirdos.indexOf(zone) !== -1) {
+  let match = false;
+  weirdos.forEach(function(value) {
+    if(match) {
+      return;
+    }
+    match = zone.indexOf(value) !== -1;
+  });
+
+  if(match) {
     locale = 'en-US'
   }
 
