@@ -4,8 +4,9 @@ module.exports = function(config) {
   config.addPassthroughCopy("src/css");
   config.addPassthroughCopy("_redirects");
 
-  // Add a handy date formatter
+  // Add some handy filters
   config.addFilter("time", require("./filters/time.js") );
+  config.addFilter("coloncapture", require("./filters/coloncapture.js") );
 
   return {
 

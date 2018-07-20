@@ -66,6 +66,19 @@ h2 {
   padding-bottom: 1em;
 }
 
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+h1.time span {
+  animation: blink 1s infinite;
+}
+
 blockquote {
   border-left-style: solid;
   border-left-width: 2px;
@@ -104,5 +117,3 @@ li {
   list-style: none;
   line-height: 1.9;
 }
-
-
