@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css" />
+    {% set css %}{% include "main.css" %}{% endset -%}
+    <style>{{ css | cssmin | safe }}</style>
     <link rel="canonical" href="https://setyourwatchby.netlify.com{{ page.url }}" />
     {%- if keepfresh %}
     <meta http-equiv="refresh" content="30">
