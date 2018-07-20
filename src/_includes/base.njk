@@ -9,7 +9,9 @@
   <body>
     {{ content | safe }}
     <div class="deets">
-      <p>The time according to Netlify ({{ zone }} ).<br /> <a href="https://github.com/philhawksworth/html-time">Made</a> by <a href="https://twitter.com/philhawksworth">Phil</a> for a giggle.</p>
+      <p>The time according to Netlify
+      {% if zone %}(<a href="/timezones">{{ zone }}</a>){% endif %}
+      <br /><a href="https://github.com/philhawksworth/html-time">Made</a> by <a href="https://twitter.com/philhawksworth">Phil</a> for a giggle.</p>
     </div>
   </body>
 </html>

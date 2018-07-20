@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: timezones
+---
+<h1>The time where you are</h1>
+
+<p>
+  This site is served from <a href="https://www.netlify.com">Netlify</a>'s intelligent CDN which can detect the coutry you are browsing from and route you to the appropriate desitination in this site.
+</p>
+
+<ul>
+{% for zone in timezones %}
+  <li><a href="/{{zone}}">{{ zone }}</a></li>
+{% endfor %}
+</ul>
+
+
