@@ -4,7 +4,7 @@ pagination:
   data: timezones
   size: 1
   alias: zone
-permalink: /{{ zone }}/index.html
+permalink: /{{ zone.location }}/index.html
 keepfresh: true
 ---
 <h1 class="time">{{ zone | time | coloncapture | safe }}</h1>

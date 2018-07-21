@@ -15,7 +15,7 @@ title: timezones
   </p>
   <ul>
   {% for zone in timezones %}
-    <li><a href="/{{zone}}">{{ zone }}</a></li>
+    <li><a href="/{{ zone.location }}">{{ zone.location }}</a></li>
   {% endfor %}
   </ul>
 </div>
