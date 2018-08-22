@@ -13,5 +13,6 @@
   { "location": "America/Chicago"},
   { "location": "America/Denver"},
   { "location": "America/Los_Angeles"},
-  { "location": "Pacific/Honolulu"}
+  { "location": "Pacific/Honolulu"},
+  { "location": "Africa/Lagos"}
 ]
