@@ -38,6 +38,10 @@ yarn
 yarn start
 ```
 
+## Deployed (really rather often) to Netlify
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/08fef174-2c11-4911-a610-19a327172024/deploy-status)](https://app.netlify.com/sites/setyourwatchby/deploys)
+
 
 
 
