@@ -10,6 +10,7 @@
   { "location": "Europe/Paris", "locale": "fr-FR"},
   { "location": "Europe/London", "locale": "en-GB"},
   { "location": "America/New_York"},
+  { "location": "America/Toronto", "locale": "en-CA"},
   { "location": "America/Chicago"},
   { "location": "America/Denver"},
   { "location": "America/Los_Angeles"},
