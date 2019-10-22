@@ -12,6 +12,7 @@
   { "location": "America/New_York"},
   { "location": "America/Toronto", "locale": "en-CA"},
   { "location": "America/Chicago"},
+  { "location": "America/Detroit"},
   { "location": "America/Denver"},
   { "location": "America/Los_Angeles"},
   { "location": "Pacific/Honolulu"},
