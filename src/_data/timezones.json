@@ -19,5 +19,6 @@
   { "location": "Pacific/Honolulu"},
   { "location": "Africa/Lagos"},
   { "location": "Asia/Kolkata", "locale": "en-IN"},
-  { "location": "Asia/Jerusalem", "locale": "he-IL"}
+  { "location": "Asia/Jerusalem", "locale": "he-IL"},
+  { "location": "Asia/Jakarta", "locale": "id-ID"}
 ]
