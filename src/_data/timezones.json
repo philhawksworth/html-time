@@ -5,6 +5,7 @@
   { "location": "Asia/Hong_Kong", "locale": "zh-hk"},
   { "location": "Europe/Bucharest", "locale": "ro"},
   { "location": "Europe/Moscow", "locale": "ru"},
+  { "location": "Europe/Helsinki", "locale": "fi-FI"},
   { "location": "Europe/Istanbul", "locale": "tr"},
   { "location": "Europe/Amsterdam", "locale": "nl-NL"},
   { "location": "Europe/Paris", "locale": "fr-FR"},
