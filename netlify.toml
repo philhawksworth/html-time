@@ -1,3 +1,11 @@
 [build]
-  command = "yarn run build"
+  command = "npm run build"
   publish = "dist"
+
+[dev]
+  command = "npm start"
+  publish = "dist"
+
+[[edge_functions]]
+  function = "time"
+  path = "/"
