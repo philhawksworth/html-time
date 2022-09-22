@@ -17,17 +17,24 @@ title: Why make this?
     </p>
   </blockquote>
 
-  <h2>Easy, automated deploys</h2>
+  <h2>That was then, this is now</h2>
   <p>
-    This site is made of static HTML. There is no javascript running to detect the time in your timezone and to display it to you.
+    Prompted by that idea by Zach, I made this site as a demonstration of how frictionless and risk-free regular autimated deployments could be. It automatically redeployed every minute of every day. It has been a helpful resource for demonstrations. But as the site shows, time moves on.
   </p>
   <p>
-    Instead, <a href="/">the time you see</a> is the time that the site was generated and deployed. It just so happens that building and deploying with Netlify is so easy, so frictionless, and so confident, that I felt comfortable rebuilding and deploying the site to Netlify's intelligent global CDN <em>every minute</em>.
+    <a href="https://www.netlify.com/products/#netlify-edge-functions">Edge Handlers</a> have brought an easier and less wasteful way to do this. By modifying HTTP responses on the fly to provide dynamic content, we don't need to redeploy every minute to make a server-generated clock! And the likes of <a href="https://www.netlify.com/products/#more-build-features">Netlify's CI/CD and automated deploys</a> have become far more accepted as the norm, so there is less need to make this point.
   </p>
-  <h2>Localization via the CDN</h2>
+  
+  <h2>Localised and modified on demand</h2>
   <p>
-    When you access this site, the CDN notices where in the world you are, and if a route has been generated for your country, it will automatically serve you that page. There <a href="/timezones">isn't a comprehensive list</a>, but you can always extend it with a <a href="{{ pkg.repository.url }}">pull request</a>!
+    Now the time you see on this site has been rendered on demand by an Edge Function. Edge Functions offer a very low latency serverless runtime at a location on the CDN geographically close to the requesting user. Very handy and still without the need to manage and maintain a server. It's just a function.
   </p>
+
+  <h2>I miss the old way</h2>
+  <p>
+    Me too. It was a bit of fun. But it was wasteful to keep it alive forever for a demo. Still, thanks to how <a href="https://www.netlify.com/products/#worry-free-deployments">Netlify retains all the previous deploys</a> on unique URLs, you can still find them. <a href="https://6177423cb626b90007b2a5d1--setyourwatchby.netlify.app/">Here's the last pre-rendered view of the site from before it switched over to using an Edge Function</a>. It's still correct once a day!
+  </p>
+
 </div>
 
 

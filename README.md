@@ -2,7 +2,7 @@
 
 https://setyourwatchby.netlify.com
 
-A ludicrous experiment triggered by a playfull tweet:
+A ludicrous experiment triggered by a playful tweet:
 
 > free side project idea: HTML-only static site generated clock that deploys a new version to @netlify every minute
 > – [@zachleat](https://twitter.com/zachleat/status/1020034115817680896)
@@ -46,7 +46,6 @@ yarn start
 ## Format for localisations
 
 Pages for different locales follow the [conventions set out on Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
-
 
 
 

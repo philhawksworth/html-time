@@ -9,10 +9,10 @@
     {%- if keepfresh %}
     <meta http-equiv="refresh" content="30">
     {%- endif %}
-    {%- if zone %}
-    <title>{{ zone | time }}</title>
+    {%- if title %}
+    <title>{{title}}</title>
     {%- else -%}
-    <title>{{ title }}</title>
+    <title>CURRENT_TIME</title>
     {% endif -%}
   </head>
   <body>
@@ -20,9 +20,10 @@
     {{ content | safe }}
     </div>
     <div class="deets">
-      <p>Set your watch by Netlify
-      {% if zone %}(<a href="/timezones">{{ zone.location }}</a>){% endif %}
-      <br /><a href="https://github.com/philhawksworth/html-time">Made</a> by <a href="https://twitter.com/philhawksworth">Phil</a> for some <a href="/why">bizarre reason</a>.</p>
+      <p>
+        <a href="/">Set your watch by Netlify</a><br />
+        <a href="https://github.com/philhawksworth/html-time">Made</a> by <a href="https://twitter.com/philhawksworth">Phil</a> for some <a href="/why">bizarre reason</a>.
+      </p>
     </div>
   </body>
 </html>
