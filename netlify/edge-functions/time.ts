@@ -17,8 +17,6 @@ export default async (request: Request, context: Context) => {
   const browserlocale = locale.default_locale.replace("_", "-");
   context.log({locale});
 
-
-
   
   // Generate a formatted time string
   const now = new Date();
