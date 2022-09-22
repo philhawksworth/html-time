@@ -28,7 +28,7 @@ export default async (request: Request, context: Context) => {
   
   // Replace the content
   const regex = /CURRENT_TIME/i;
-  const updatedPage = page.replace(regex, time);
+  const updatedPage = page.replace(regex, JSON.stringify(context));
   return new Response(updatedPage, response);
 
 };
