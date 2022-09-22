@@ -14,7 +14,7 @@ export default async (request: Request, context: Context) => {
 
   // Generate a formatted time string
   const now = new Date();
-  const time = now.toLocaleString(locale, { timeZone: timezone, hour: 'numeric', minute: 'numeric'}).replace(":","<span>:</span>"); 
+  const time = now.toLocaleString(locale, { timeZone: timezone, hour: 'numeric', minute: 'numeric'}); 
 
   // Get the page content
   const response = await context.next();
