@@ -5,11 +5,10 @@ import iplocation from 'https://cdn.skypack.dev/iplocation';
 
 export default async (request: Request, context: Context) => {
 
-
-  // determine location and probably locale from the IP address
+  // determine location and probable locale from the IP address
   const location = await iplocation(context.ip);
-  const locale = location.country.languages[0];
-  const timezone = location.country.timezone.code
+  const locale = location?.country?.languages[0] || "en-GB";
+  const timezone = location?.country?.timezone?.code || "Europe/London"
 
   context.log({location});
 
