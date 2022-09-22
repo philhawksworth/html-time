@@ -14,14 +14,14 @@ export default async (request: Request, context: Context) => {
 
   // Generate a formatted time string
   const now = new Date();
-  const time = now.toLocaleString(locale, { timeZone: timezone, hour: 'numeric', minute: 'numeric'}); 
+  const time = now.toLocaleString(locale, { timeZone: timezone, hour: 'numeric', minute: 'numeric'}).replace(":","<span>:</span>"); 
 
   // Get the page content
   const response = await context.next();
   const page = await response.text();
   
   // Replace the content
-  const regex = /CURRENT_TIME/i;
+  const regex = /CURRENT_TIME/gi;
   const updatedPage = page.replace(regex, time);
   return new Response(updatedPage, response);
 
