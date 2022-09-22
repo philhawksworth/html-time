@@ -3,9 +3,10 @@ import iplocation from 'https://cdn.skypack.dev/iplocation';
 
 // Note: rate limits!  https://github.com/Richienb/iplocation#providers
 
+export default async (request: Request, context: Context) => {
 
-export default async (context: Context) => {
 
+  // determine location and probably locale from the IP address
   const location = await iplocation(context.ip);
   const locale = location.country.languages[0];
   const timezone = location.country.timezone.code
