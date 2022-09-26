@@ -8,7 +8,7 @@ export default async (request: Request, context: Context) => {
   // determine location and probable locale from the IP address
   let location;
   try {
-    let location = await iplocation(context.ip);
+    location = await iplocation(context.ip);
   } catch (error) {
     location = null;
   }
