@@ -54,7 +54,7 @@ a:focus {
 
 h1 {
   padding-top: 2em;
-  padding-bottom: 1em;
+  padding-bottom: 0;
 }
 h1.time {
   padding-top: 35vh;
@@ -116,4 +116,9 @@ ul {
 li {
   list-style: none;
   line-height: 1.9;
+}
+
+p.location {
+  font-size: 0.7em;
+  color: #a99;
 }

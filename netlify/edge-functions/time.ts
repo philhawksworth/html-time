@@ -6,23 +6,39 @@ import iplocation from 'https://cdn.skypack.dev/iplocation';
 export default async (request: Request, context: Context) => {
 
   // determine location and probable locale from the IP address
-  const location = await iplocation(context.ip);
-  const locale = location?.country?.languages[0] || "en-GB";
-  const timezone = location?.country?.timezone?.code || "Europe/London"
-
+  try {
+    let location = await iplocation(context.ip);
+  } catch (error) {
+    let location = null;
+  }
+  
+  let locale = location?.country?.languages[0] || "en-GB";
+  let timezone = location?.country?.timezone?.code || "Europe/London"
+  
   context.log({location});
-
+  
+  
   // Generate a formatted time string
   const now = new Date();
   const time = now.toLocaleString(locale, { timeZone: timezone, hour: 'numeric', minute: 'numeric'}); 
+  
+  // Where is the user?
+  let locationLabel
+  if(location) {
+    locationLabel = "London, England";
+  } else {
+    locationLabel = `${context.geo.city}, ${context.geo.country.name}`;
+  }
 
   // Get the page content
   const response = await context.next();
   const page = await response.text();
   
   // Replace the content
-  const regex = /CURRENT_TIME/gi;
-  const updatedPage = page.replace(regex, time);
+  const regex_time = /CURRENT_TIME/gi;
+  const regex_place = /CURRENT_LOCATION/gi;
+  let updatedPage = page.replace(regex_time, time);
+  updatedPage = updatedPage.replace(regex_place, locationLabel);
   return new Response(updatedPage, response);
 
 };
