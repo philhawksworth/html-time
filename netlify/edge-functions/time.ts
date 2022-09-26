@@ -7,10 +7,13 @@ export default async (request: Request, context: Context) => {
 
   // determine location and probable locale from the IP address
   let location;
+  let locationLabel
   try {
     location = await iplocation(context.ip);
+    locationLabel = `${context.geo.city}, ${context.geo.country.name}`;
   } catch (error) {
     location = null;
+    locationLabel = "London, England";
   }
   
   let locale = location?.country?.languages[0] || "en-GB";
@@ -21,13 +24,6 @@ export default async (request: Request, context: Context) => {
   const now = new Date();
   const time = now.toLocaleString(locale, { timeZone: timezone, hour: 'numeric', minute: 'numeric'}); 
   
-  // Where is the user?
-  let locationLabel
-  if(location) {
-    locationLabel = "London, England";
-  } else {
-    locationLabel = `${context.geo.city}, ${context.geo.country.name}`;
-  }
 
   // Get the page content
   const response = await context.next();
