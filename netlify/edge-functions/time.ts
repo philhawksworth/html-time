@@ -6,18 +6,17 @@ import iplocation from 'https://cdn.skypack.dev/iplocation';
 export default async (request: Request, context: Context) => {
 
   // determine location and probable locale from the IP address
+  let location;
   try {
     let location = await iplocation(context.ip);
   } catch (error) {
-    let location = null;
+    location = null;
   }
   
   let locale = location?.country?.languages[0] || "en-GB";
   let timezone = location?.country?.timezone?.code || "Europe/London"
   
-  context.log({location});
-  
-  
+    
   // Generate a formatted time string
   const now = new Date();
   const time = now.toLocaleString(locale, { timeZone: timezone, hour: 'numeric', minute: 'numeric'}); 
