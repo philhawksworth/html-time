@@ -1,30 +1,18 @@
 import { Context } from "https://edge.netlify.com";
-import iplocation from 'https://cdn.skypack.dev/iplocation';
-
-// Note: rate limits!  https://github.com/Richienb/iplocation#providers
 
 export default async (request: Request, context: Context) => {
 
-  // determine location and probable locale from the IP address
-  let location;
-  let locationLabel
-  try {
-    location = await iplocation(context.ip);
-    locationLabel = `${context.geo.city}, ${context.geo.country.name}`;
-  } catch (error) {
-    location = null;
-    locationLabel = "London, England";
-  }
+  // get geo and timezone data from Netlify's Edge
+  const timezone = context?.geo?.timezone || "Europe/London";
+  const locationLabel = `${context?.geo?.city}, ${context?.geo?.country?.name}` || "London, England";
   
-  let locale = location?.country?.languages[0] || "en-GB";
-  let timezone = location?.country?.timezone?.code || "Europe/London"
+  // What language does the user prefer
+  const locale = request.headers["accept-language"] || "en-GB";
   
-    
   // Generate a formatted time string
   const now = new Date();
   const time = now.toLocaleString(locale, { timeZone: timezone, hour: 'numeric', minute: 'numeric'}); 
   
-
   // Get the page content
   const response = await context.next();
   const page = await response.text();
